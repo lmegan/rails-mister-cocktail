@@ -1,2 +1,9 @@
-<h1>Doses#new</h1>
-<p>Find me in app/views/doses/new.html.erb</p>
+<%= simple_form_for ([@cocktail, @dose]) do |f| %>
+  <div class="form-group">
+    <%= f.label :ingredients %>
+    <%= f.association :ingredient, class: 'form-control' %>
+    <%= f.label :dose %>
+    <%= f.text_field :description, class: 'form-control' %>
+    <%= f.submit class: 'btn btn-primary' %>
+  </div>
+<% end %>
